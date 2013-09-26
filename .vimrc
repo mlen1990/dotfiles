@@ -1,54 +1,31 @@
-filetype on  " Automatically detect file types.
-set nocompatible  " no vi compatibility.
-" Add recently accessed projects menu (project plugin)
-set viminfo^=\!
-
-" Minibuffer Explorer Settings
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
-" alt+n or alt+p to navigate between entries in QuickFix
-map <silent> <m-p> :cp <cr>
-map <silent> <m-n> :cn <cr>
-
+filetype on         " Automatically detect file types
+set nocompatible    " no vi compatibility
+set expandtab       " Use spaces instead of tabs
+set smarttab
+set tabstop=4       " Tabs are 4 spaces
+set shiftwidth=4    " Tabs under smart indent
+set softtabstop=4   
+set ai              " Auto indent
+set si              " Smart indent
+set wrap
+set nu              " Show line numbers 
+colors slate        " Set the text color
+set ignorecase      " Do case insensitive matching
+set smartcase       " Do smart case matching
+set incsearch       " Incremental search
+set hlsearch        " Highlight search results
+set showmatch       " Show matching brackets
 
 syntax enable
 
-set cf  " Enable error files & error jumping.
-set clipboard+=unnamed  " Yanks go on clipboard instead.
-set history=256  " Number of things to remember in history.
-set autowrite  " Writes on make/shell commands
-set ruler  " Ruler on
-set nu  " Line numbers on
-set nowrap  " Line wrapping off
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-" colorscheme vividchalk  " Uncomment this to set a default theme
-
-" Formatting
-set ts=2  " Tabs are 4 spaces
-set bs=2  " Backspace over everything in insert mode
-set shiftwidth=2 " Tabs under smart indent
-set nocp incsearch
-set cinoptions=:0,p0,t0
-set cinwords=if,else,while,do,for,switch,case
-set formatoptions=tcqr
-set cindent
-set autoindent
-set smarttab
-set expandtab
+set ruler           " Ruler on
+set wrap            " Linr wrapping on
+set linebreak
+set nolist
 
 " Visual
-set showmatch  " Show matching brackets.
-set mat=5  " Bracket blinking.
+set showmatch       " Show matching brackets
+" Show trailing space as ~
 set list
-" Show $ at end of line and trailing space as ~
 set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
-set novisualbell  " No blinking .
-set noerrorbells  " No noise.
-set laststatus=2  " Always show status line.
-
-" gvim specific
-set mousehide  " Hide mouse after chars typed
-set mouse=a  " Mouse in all modesc
+set laststatus=2    " Always show status line
